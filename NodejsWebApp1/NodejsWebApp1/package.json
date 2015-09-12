@@ -1,0 +1,13 @@
+{
+  "name": "NodejsWebApp1",
+  "version": "0.0.0",
+  "description": "NodejsWebApp1",
+  "main": "server.js",
+  "author": {
+    "name": "Preston",
+    "email": ""
+  },
+  "dependencies": {
+    "github": "^0.2.4"
+  }
+}
