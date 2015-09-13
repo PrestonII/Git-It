@@ -35,23 +35,26 @@ WayBetter.prototype.getOrganizationInformation =
 };
 
 WayBetter.prototype.addRepositories =
-    function(repositories) {
-        for (var repo in repositories) {
-//            repositories.add(
-//                new WayBetter.Repository(
-//                    repo
-////                    {
-////                    id: repo.id,
-////                    name: repo.name,
-////                    ssh_url: repo.ssh_url,
-////                    commits_locations = repo.
-////                    }
-//                )
-//            );
+    function (repositories) {
+        //print the repository information
+        console.log(repositories);
 
-            console.log(repo.id);
-            console.log(repo.name);
-        }
+//        for (var repo in repositories) {
+////            repositories.add(
+////                new WayBetter.Repository(
+////                    repo
+//////                    {
+//////                    id: repo.id,
+//////                    name: repo.name,
+//////                    ssh_url: repo.ssh_url,
+//////                    commits_locations = repo.
+//////                    }
+////                )
+////            );
+//
+//            console.log(repo.id);
+//            console.log(repo.name);
+//        }
     };
 
 WayBetter();

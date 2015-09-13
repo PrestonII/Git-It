@@ -19,6 +19,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -62,12 +63,14 @@
     <Content Include="crossdomain.xml" />
     <Content Include="css\main.css" />
     <Content Include="css\normalize.css" />
+    <Content Include="css\waybetter.css" />
     <Content Include="favicon.ico" />
     <Content Include="humans.txt" />
     <Content Include="img\.gitignore" />
     <Content Include="index.html" />
     <Content Include="js\main.js" />
     <Content Include="js\plugins.js" />
+    <Content Include="js\ajaxtests.js" />
     <Content Include="js\vendor\jquery-1.10.2.min.js" />
     <Content Include="js\vendor\modernizr-2.6.2.min.js" />
     <Content Include="robots.txt" />
