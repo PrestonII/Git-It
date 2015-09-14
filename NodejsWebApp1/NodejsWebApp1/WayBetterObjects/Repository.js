@@ -1,4 +1,4 @@
-﻿(function(WayBetter) {
+﻿//module.exports = (function() {
     
     /*
      * Wrapper class for the GitHubApi Repository
@@ -6,44 +6,45 @@
      * It also contains the total number of commits, additions and deleted
      */
 
-    WayBetter.Repository = function(gitrepo) {
-        this.id = null;
-        this.name = null;
-        this.ssh_url = null;
-        this.commits_locations = null;
+var Repository = function(gitrepo) {
+    this.id = null;
+    this.name = null;
+    this.ssh_url = null;
+    this.commits_locations = null;
 
-        this.commitsCount = null;
-        this.totalLinesAdded = null;
-        this.totalLinesDeleted = null;
+    this.commitsCount = null;
+    this.totalLinesAdded = null;
+    this.totalLinesDeleted = null;
 
-        this.initialize(gitrepo);
-    }
+    this.initialize(gitrepo);
+}
 
-    Repository.prototype = {
-        initialize: function (gitrepo) {
-            this.id = gitrepo.id;
-            this.name = gitrepo.name;
-            this.ssh_url = gitrepo.ssh_url;
-            this.commits_locations = git_commits_url;
-            this.totalLinesAdded = calculateTotalLinesAdded(gitrepo, anydate);
-            this.totalLinesDeleted = calculateTotalLinesDeleted(gitrepo, anydate);
 
-            console.log(this.id);
-            console.log(this.name);
-            // get the current date selected by the user
+Repository.initialize = function(gitrepo) {
+        Repository.id = gitrepo.id;
+        Repository.name = gitrepo.name;
+        Repository.ssh_url = gitrepo.ssh_url;
+        Repository.commits_locations = gitrepo.git_commits_url;
+        Repository.totalLinesAdded = Repository.calculateTotalLinesAdded(gitrepo, anydate);
+        Repository.totalLinesDeleted = Repository.calculateTotalLinesDeleted(gitrepo, anydate);
 
-            // 
-        },
+        console.log(Repository.id);
+        console.log(Repository.name);
+        // get the current date selected by the user
 
-        calculateTotalLinesAdded: function(gitrepo, date) {
+        // 
+    };
+
+    Repository.prototype.calculateTotalLinesAdded =
+        function(gitrepo, date) {
             var currentDate = date || Date.getDate;
-        },
+        };
 
-        calculateTotalLinesDeleted: function (gitrepo, date) {
+    Repository.prototype.calculateTotalLinesDeleted =
+        function(gitrepo, date) {
             var currentDate = date || Date.getDate;
-            
-        }
-    }
-})
 
-(WayBetter.Repository);
+        };
+
+    module.exports = Repository;
+Repository();

@@ -1,4 +1,5 @@
-﻿/*
+﻿var Repository = require('./Repository.js');
+/*
  * Container for the WayBetterObject
  */
 
@@ -37,24 +38,15 @@ WayBetter.prototype.getOrganizationInformation =
 WayBetter.prototype.addRepositories =
     function (repositories) {
         //print the repository information
-        console.log(repositories);
+//        console.log(repositories);
+        
 
-//        for (var repo in repositories) {
-////            repositories.add(
-////                new WayBetter.Repository(
-////                    repo
-//////                    {
-//////                    id: repo.id,
-//////                    name: repo.name,
-//////                    ssh_url: repo.ssh_url,
-//////                    commits_locations = repo.
-//////                    }
-////                )
-////            );
+        for (var n = 0; n < repositories.length; n++) {
+            repositories.add(new Repository(repositories[n]));
 //
-//            console.log(repo.id);
-//            console.log(repo.name);
-//        }
-    };
+//            console.log(repositories[i].id);
+//            console.log(repositories[i].name);
+        }
+};
 
 WayBetter();
