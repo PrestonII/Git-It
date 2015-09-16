@@ -20,7 +20,7 @@ var Repository = function(gitrepo) {
 }
 
 
-Repository.initialize = function(gitrepo) {
+Repository.prototype.initialize = function(gitrepo) {
         Repository.id = gitrepo.id;
         Repository.name = gitrepo.name;
         Repository.ssh_url = gitrepo.ssh_url;
@@ -46,5 +46,5 @@ Repository.initialize = function(gitrepo) {
 
         };
 
-    module.exports = Repository;
+module.exports = Repository;
 Repository();

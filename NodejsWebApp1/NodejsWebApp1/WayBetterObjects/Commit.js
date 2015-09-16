@@ -18,14 +18,16 @@
         this.initialize(commitObject);
     }
 
-    Commit.prototype = 
-    {
+    Commit.prototype = {
         initialize: function (commitObject) {
             this.id = commitObject.commit.sha;
             this.name = commitObject.message;
+        },
+        setSha: function(someString) {
+            // do some stuff
         }
     };
 
 })
 
-(WayBetter.Commit);
+(Organization.Commit);
