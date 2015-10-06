@@ -1,50 +1,44 @@
-﻿//module.exports = (function() {
-    
-    /*
-     * Wrapper class for the GitHubApi Repository
-     * A Repository is a collection of Commits
-     * It also contains the total number of commits, additions and deleted
-     */
+﻿/*
+ * Wrapper class for the GitHubApi Repository
+ * A Repository is a collection of Commits
+ * It also contains the total number of commits, additions and deleted
+ */
 
-var Repository = function(gitrepo) {
-    this.id = null;
-    this.name = null;
-    this.ssh_url = null;
-    this.commits_locations = null;
-
-    this.commitsCount = null;
-    this.totalLinesAdded = null;
-    this.totalLinesDeleted = null;
-
+//TODO: is this the proper way to build a Javascript object?
+Repository = function (gitrepo) {
+    self = this;
     this.initialize(gitrepo);
-}
+};
 
-
-Repository.prototype.initialize = function(gitrepo) {
-        Repository.id = gitrepo.id;
-        Repository.name = gitrepo.name;
-        Repository.ssh_url = gitrepo.ssh_url;
-        Repository.commits_locations = gitrepo.git_commits_url;
-        Repository.totalLinesAdded = Repository.calculateTotalLinesAdded(gitrepo, anydate);
-        Repository.totalLinesDeleted = Repository.calculateTotalLinesDeleted(gitrepo, anydate);
-
-        console.log(Repository.id);
-        console.log(Repository.name);
+Repository.prototype = {
+    id: null,
+    name: null,
+    ssh_url: null,
+    commits_locations: null,
+    initialize: function (gitrepo) {
+        this.id = gitrepo.id;
+        this.name = gitrepo.name;
+        this.ssh_url = gitrepo.ssh_url;
+        this.commits_locations = gitrepo.git_commits_url;
+        //this.totalLinesAdded = this.calculateTotalLinesAdded(gitrepo, anydate);
+        //this.totalLinesDeleted = this.calculateTotalLinesDeleted(gitrepo, anydate);
+        
+        console.log(this.id);
+        console.log(this.name);
         // get the current date selected by the user
 
-        // 
-    };
-
-    Repository.prototype.calculateTotalLinesAdded =
-        function(gitrepo, date) {
+        //
+    },
+    calculateTotalLinesAdded:
+        function (gitrepo, date) {
             var currentDate = date || Date.getDate;
-        };
-
-    Repository.prototype.calculateTotalLinesDeleted =
-        function(gitrepo, date) {
-            var currentDate = date || Date.getDate;
-
-        };
+            },
+    
+    calculateTotalLinesDeleted:
+         function (gitrepo, date) {
+                var currentDate = date || Date.getDate;
+            }
+};
 
 module.exports = Repository;
-Repository();
+//Repository();

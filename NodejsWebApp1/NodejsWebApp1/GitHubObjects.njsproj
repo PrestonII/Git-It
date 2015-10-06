@@ -13,7 +13,7 @@
     <ProjectGuid>9178b6ea-2207-4c6b-9bc6-438652dc8a15</ProjectGuid>
     <ProjectHome>
     </ProjectHome>
-    <StartupFile>WayBetterObjects\Organization.js</StartupFile>
+    <StartupFile>main_version2.js</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -34,6 +34,7 @@
     <Compile Include="WayBetterObjects\Commit.js" />
     <Compile Include="main.js" />
     <Compile Include="WayBetterObjects\File.js" />
+    <Compile Include="main_version2.js" />
     <Compile Include="WayBetterObjects\Repository.js" />
     <Compile Include="server.js" />
     <Compile Include="WayBetterObjects\Organization.js" />
