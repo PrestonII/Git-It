@@ -4,8 +4,7 @@
  
 Repository = require("./Repository");
 // Create the GitHubApi object and pass UserAgent data
-var UserAgent = "WayBetter_TechTest_PSmith";
-var organizationName = 'waybetterdev';
+var UserAgent = "GitHubApiConsumerApp";
 var GitHub = require('github');
 var githubapi = new GitHub({
     version: "3.0.0",
@@ -15,15 +14,16 @@ var githubapi = new GitHub({
 });
 
 
-var Organization = function () {
+var Organization = function (orgName) {
     self = this;
-    this.initialize();
+    var organizationToSearchFor = orgName || 'waybetterdev';
+    this.initialize(organizationToSearchFor);
 };
 
 Organization.prototype = {
     repositories: [],
     initialize: 
-        function () {
+        function (organizationName) {
         // get the user/organization info
         githubapi.repos.getFromOrg({
             org: organizationName,

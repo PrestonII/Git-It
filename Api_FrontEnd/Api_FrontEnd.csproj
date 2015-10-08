@@ -61,16 +61,19 @@
     <Content Include="404.html" />
     <Content Include="apple-touch-icon-precomposed.png" />
     <Content Include="crossdomain.xml" />
+    <Content Include="css\bootstrap-theme.min.css" />
+    <Content Include="css\bootstrap.min.css" />
     <Content Include="css\main.css" />
     <Content Include="css\normalize.css" />
-    <Content Include="css\waybetter.css" />
     <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="humans.txt" />
     <Content Include="img\.gitignore" />
     <Content Include="index.html" />
     <Content Include="js\main.js" />
     <Content Include="js\plugins.js" />
     <Content Include="js\ajaxtests.js" />
+    <Content Include="js\vendor\bootstrap.min.js" />
     <Content Include="js\vendor\jquery-1.10.2.min.js" />
     <Content Include="js\vendor\modernizr-2.6.2.min.js" />
     <Content Include="robots.txt" />
@@ -94,6 +97,10 @@
     <Content Include="doc\usage.md" />
     <Content Include="LICENSE.md" />
     <Content Include="README.md" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -101,6 +108,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
