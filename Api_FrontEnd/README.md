@@ -1,20 +1,16 @@
-# [HTML5 Boilerplate](http://html5boilerplate.com)
+# [Git' It!](prestonsmith.net/gitit)
 
-HTML5 Boilerplate is a professional front-end template for building fast,
-robust, and adaptable web apps or sites.
-
-This project is the product of many years of iterative development and combined
-community knowledge. It does not impose a specific development philosophy or
-framework, so you're free to architect your code in the way that you want.
-
-* Source: [https://github.com/h5bp/html5-boilerplate](https://github.com/h5bp/html5-boilerplate)
-* Homepage: [http://html5boilerplate.com](http://html5boilerplate.com)
-* Twitter: [@h5bp](http://twitter.com/h5bp)
+Git' It is a small, lightweight experiment for accessing Github Repositories
+through a desktop application. It is built with another experimental technology called
+a node-webkit and which aims to create desktop applications which using HTML5 and CSS.
+Thanks to those folks you can run the application directly after downloading it without 
+having to install any extra programs.
 
 
 ## Quick start
 
-Choose one of the following options:
+Download the necessary files from the `Application` folder and follow the instructions
+below.
 
 1. Download the latest stable release from
    [html5boilerplate.com](http://html5boilerplate.com/) or a custom build from

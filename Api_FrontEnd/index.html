@@ -1,29 +1,31 @@
 ﻿<!doctype html>
 <html class="no-js" lang="">
 <head>
-    <link href="css/bootstrap-theme.min.css" rel="stylesheet"/>
+<!--    <link href="css/bootstrap-theme.min.css" rel="stylesheet"/>-->
     <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/html5_default.css" rel="stylesheet"/>
+    <!-- <link href="css/normalize.css" rel="stylesheet"/>-->
     <link href="css/main.css" rel="stylesheet"/>
 </head>
 <body data-feedly-mini="yes">
-    <div class="jumbotron">
-        GitHub Lookup Tool
-    </div>
+    <!-- Header -->
+    <header id="header">
+        <h1>Git' It!</h1>
+        <p>
+            A quick tool to help you find<br />
+            information about your repos.
+        </p>
+        <a>Search in the box to get started</a>
+    </header>
 
-    <div class="nav">
-        <div class="container">
-            <ul class="pull-left">
-                <li><a href="#">Name</a></li>
-                <li><a href="#">Browse</a></li>
-            </ul>
-            <ul class="pull-right">
-                <li><a href="#">Sign Up</a></li>
-                <li><a href="#">Log In</a></li>
-                <li><a href="#">Help</a></li>
-            </ul>
-        </div>
-    </div>
-    <script src="js/vendor/jquery-1.11.2.min.js"></script>
-    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <!-- Organization Lookup -->
+    <form id="signup-form" method="post" action="#">
+        <input type="text" name="organization" id="organization" placeholder="Organization" />
+        <input type="submit" value="Search" /><span> class="search-icon"</span>
+    </form>
+
+        <!-- Scripts -->
+        <script src="js/vendor/jquery-1.10.2.min.js"></script>
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
 </body>
 </html>
