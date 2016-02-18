@@ -5,6 +5,7 @@ File = require("/.WaybetterObjects/File");
 console.log("Files loaded");
 
 (function() {
-    var organization = new Organization();
+	var organization = new Organization();
+	organization.addRepositories
 
 })()

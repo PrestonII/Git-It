@@ -16,7 +16,7 @@ var githubapi = new GitHub({
 
 var Organization = function (orgName) {
     self = this;
-    var organizationToSearchFor = orgName || 'waybetterdev';
+    var organizationToSearchFor = orgName || "environmental-intellect";
     this.initialize(organizationToSearchFor);
 };
 
@@ -36,11 +36,11 @@ Organization.prototype = {
     getOrganizationInformation:
          function () { },
     addRepositories:
-         function (repository) {
+         function (repositoryColl) {
                 //print the repository information
                 //        console.log(repositories);
-                for (var n = 0; n < repository.length; n++) {
-                    this.repositories.push(new Repository(repository[n]));
+                for (var n = 0; n < repositoryColl.length; n++) {
+                    this.repositories.push(new Repository(repositoryColl[n]));
                 }
             }
 }
