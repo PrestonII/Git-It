@@ -13,7 +13,7 @@
     <ProjectGuid>9178b6ea-2207-4c6b-9bc6-438652dc8a15</ProjectGuid>
     <ProjectHome>
     </ProjectHome>
-    <StartupFile>main_version2.js</StartupFile>
+    <StartupFile>scripts\main_version2.js</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -31,18 +31,20 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="GitHubObjects\Commit.js" />
-    <Compile Include="main.js" />
-    <Compile Include="GitHubObjects\File.js" />
-    <Compile Include="main_version2.js" />
-    <Compile Include="GitHubObjects\Repository.js" />
-    <Compile Include="server.js" />
-    <Compile Include="GitHubObjects\Organization.js" />
+    <Compile Include="scripts\git\Commit.js" />
+    <Compile Include="scripts\main.js" />
+    <Compile Include="scripts\git\File.js" />
+    <Compile Include="scripts\main_version2.js" />
+    <Compile Include="scripts\git\Repository.js" />
+    <Compile Include="scripts\server.js" />
+    <Compile Include="scripts\git\Organization.js" />
+    <Compile Include="scripts\_references.js" />
     <Content Include="package.json" />
     <Content Include="README.md" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="GitHubObjects\" />
+    <Folder Include="scripts\git\" />
+    <Folder Include="scripts\" />
   </ItemGroup>
   <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />

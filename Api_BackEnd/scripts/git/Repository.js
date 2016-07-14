@@ -29,6 +29,7 @@ Repository.prototype = {
 
         //
     },
+
     calculateTotalLinesAdded:
         function (gitrepo, date) {
             var currentDate = date || Date.getDate;
