@@ -1,4 +1,18 @@
 ﻿
+#info-display {
+    height: 400px;
+    /*text-align: center;
+    vertical-align: middle;*/
 
-body {
+    /*one way of centering the items*/
+    /*not very successful*/
+    /*position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);*/
+
+    /*another way of doing it*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
