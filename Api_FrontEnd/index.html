@@ -1,31 +1,55 @@
 ﻿<!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="en-us">
 <head>
-<!--    <link href="css/bootstrap-theme.min.css" rel="stylesheet"/>-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1"/>
+    <meta name="description" content="A quick tool to help you find information about your repos"/>
+    <meta name="keywords" content="git, github, github search tool, repository search tool"/>
+
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet"/>
     <link href="css/bootstrap.min.css" rel="stylesheet"/>
     <link href="css/html5_default.css" rel="stylesheet"/>
-    <!-- <link href="css/normalize.css" rel="stylesheet"/>-->
+    <link href="css/normalize.css" rel="stylesheet"/>
     <link href="css/main.css" rel="stylesheet"/>
 </head>
 <body data-feedly-mini="yes">
-    <!-- Header -->
-    <header id="header">
-        <h1>Git' It!</h1>
-        <p>
-            A quick tool to help you find<br />
-            information about your repos.
-        </p>
-        <a>Search in the box to get started</a>
-    </header>
 
-    <!-- Organization Lookup -->
-    <form id="signup-form" method="post" action="#">
-        <input type="text" name="organization" id="organization" placeholder="Organization" />
-        <input type="submit" value="Search" /><span> class="search-icon"</span>
-    </form>
+<div id="overall">
+    
+    <div id="git-it">
+        <div class="jumbotron">
+            <h1>Git' It!</h1>
+        </div>
+    </div>
 
-        <!-- Scripts -->
-        <script src="js/vendor/jquery-1.10.2.min.js"></script>
-        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    <div id="" class="container">
+        <div class="row">
+
+            <div id="search-area" class="col-sm-6">
+                <p>
+                    A quick tool to help you find<br/>
+                    information about your repos.
+                </p>
+                <i>Search in the box to get started</i>
+
+                <!-- Organization Lookup -->
+                <form id="signup-form" method="post" action="#">
+                    <input type="text" name="organization" id="organization" placeholder="Organization"/>
+                    <button type="submit" class="btn btn-sm">
+                        <i class="glyphicon glyphicon-search"></i> Search
+                    </button>
+                </form>
+            </div>
+
+            <div id="info-display" class="col-sm-6 bg-danger">
+                    Some Info
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Scripts -->
+<script src="js/vendor/jquery-1.10.2.min.js"></script>
+<script src="js/vendor/modernizr-2.6.2.min.js"></script>
 </body>
 </html>

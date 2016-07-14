@@ -3,7 +3,7 @@
 var GitHubApi = require('github');
 var JQuery = require('jquery');
 
-var UserAgent = "WayBetter_TechTest_PSmith";
+var UserAgent = "Git' It WebKit";
 
 (function() {
     // do a bunch of stuff here
@@ -33,7 +33,7 @@ var UserAgent = "WayBetter_TechTest_PSmith";
 //    console.log(repoUrl);
 
     var waybetterRepos = github.repos.getFromOrg({
-        org: 'waybetterdev',
+        org: 'Environmental-intellect',
         type: 'public'
     }, function (err, res) {
         console.log(JSON.stringify(res));
