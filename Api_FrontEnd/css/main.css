@@ -8,12 +8,13 @@
     justify-content: center;
 }
 
-.vertical-center {
+#background {
     top: 0;
     left: 0;
     min-height: 100%;
     min-height: 100vh;
     min-width: 100%;
+    min-width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -22,10 +23,16 @@
 }
 
 #git-it {
-    font-size: 120px;
+    font-size: 10vw;
     font-family: 'Quicksand', sans-serif;
     animation-delay: .5s;
     animation-duration: 2s;
+}
+
+@media (min-width: 600px) and (max-width: 1000px) {
+    #git-it {
+        font-size: 15vw;
+    }
 }
 
 #start-arrow {
@@ -33,6 +40,13 @@
     top: 70%;
     left: 50%;
     animation-delay: 2.25s;
+    color: #262626;
+    font-size: 2.5vw;
+    opacity: 1;
+}
+
+#start-arrow:hover {
+    color: #8c8c8c;
 }
 
 #github-search {
