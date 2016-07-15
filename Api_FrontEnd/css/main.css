@@ -9,22 +9,36 @@
 }
 
 .vertical-center {
+    top: 0;
+    left: 0;
     min-height: 100%;
     min-height: 100vh;
+    min-width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-#title {
-    font-size: 107px;
-    font-family: 'Quicksand', sans-serif;
-}
-
-
-
-/*#git-it{
+    z-index: 0;
     position: fixed;
+}
+
+#git-it {
+    font-size: 120px;
+    font-family: 'Quicksand', sans-serif;
+    animation-delay: .5s;
+    animation-duration: 2s;
+}
+
+#start-arrow {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    animation-delay: 2.25s;
+}
+
+#github-search {
+    margin-top: 100%;
     width: 100%;
-    z-index: 10;
-}*/
+    z-index: 5;
+    position: relative;
+    background-color: white;
+}

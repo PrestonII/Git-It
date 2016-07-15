@@ -15,54 +15,58 @@
 </head>
 <body data-feedly-mini="yes">
 
-<div id="overall">
+<div id="page">
 
     <!-- Git' It Header And Navbar -->
-    <nav id="git-it" data-spy="affix">
+    <section id="intro">
         <div class="jumbotron vertical-center">
-            <p id="title" class="animated fadeInDown">Git' It!</p>
+            <p id="git-it" class="animated fadeInDown">Git' It!</p>
+            <br/>
+            <p id="start-arrow" class="glyphicon glyphicon-chevron-down animated fadeIn"></p>
         </div>
-    </nav>
+    </section>
     <!-- End of Header And Navbar -->
 
     <!-- True Body Content -->
-    <div id="" class="container">
-        <div class="row">
+    <section id="display-area">
+        <div id="github-search" class="container">
+            <div class="row">
 
-            <div id="search-area" class="col-sm-6">
-                <p class="animated fadeInLeft">
-                    A quick tool to help you find<br/>
-                    information about your repos.
-                </p>
-                <i>Search in the box to get started</i>
+                <div id="search-area" class="col-sm-6">
+                    <p class="animated fadeInLeft">
+                        A quick tool to help you find<br />
+                        information about your repos.
+                    </p>
+                    <i>Search in the box to get started</i>
 
-                <!-- Organization Lookup -->
-                <form id="signup-form" method="post" action="#">
-                    <input type="text" name="organization" id="organization" placeholder="Organization"/>
-                    <button type="submit" class="btn btn-sm">
-                        <i class="glyphicon glyphicon-search"></i> Search
-                    </button>
-                </form>
+                    <!-- Organization Lookup -->
+                    <form id="signup-form" method="post" action="#">
+                        <input type="text" name="organization" id="organization" placeholder="Organization" />
+                        <button type="submit" class="btn btn-sm">
+                            <i class="glyphicon glyphicon-search"></i> Search
+                        </button>
+                    </form>
+                </div>
+
+                <div id="info-display" class="col-sm-6 bg-danger">
+                    Some Info
+                </div>
+
+                <div id="info-display2" class="col-sm-12 bg-danger">
+                    Some Info
+                </div>
+
+                <div id="info-display3" class="col-sm-12 bg-danger">
+                    Some Info
+                </div>
+
+                <div id="info-display4" class="col-sm-12 bg-danger">
+                    Some Info
+                </div>
+
             </div>
-
-            <div id="info-display" class="col-sm-6 bg-danger">
-                Some Info
-            </div>
-
-            <div id="info-display2" class="col-sm-12 bg-danger">
-                Some Info
-            </div>
-
-            <div id="info-display3" class="col-sm-12 bg-danger">
-                Some Info
-            </div>
-
-            <div id="info-display4" class="col-sm-12 bg-danger">
-                Some Info
-            </div>
-
         </div>
-    </div>
+    </section>
     <!-- End Of True Content -->
 </div>
 
