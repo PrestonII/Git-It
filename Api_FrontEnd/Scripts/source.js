@@ -3,6 +3,10 @@
 }
 
 function onStart() {
+    moveSearchAreaOnClick();
+}
+
+function moveSearchAreaOnClick() {
     $("#start-arrow").click(function () {
         $("#github-search")
             .animate({
