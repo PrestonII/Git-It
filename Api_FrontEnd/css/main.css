@@ -1,5 +1,20 @@
 ﻿@import 'https://fonts.googleapis.com/css?family=Quicksand';
 
+body {
+    height: auto;
+    width: auto;
+    border-bottom: 2px solid white;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 12px;
+}
+
+input {
+    border: 0;
+    outline: 0;
+    background: transparent;
+    text-indent: 10px;
+}
+
 #info-display, #info-display2, #info-display3, #info-display4 {
     height: 400px;
     /*one way of centering the items*/
@@ -20,6 +35,7 @@
     justify-content: center;
     z-index: 0;
     position: fixed;
+    background-color: #262626;
 }
 
 #git-it {
@@ -27,6 +43,15 @@
     font-family: 'Quicksand', sans-serif;
     animation-delay: .5s;
     animation-duration: 2s;
+    color: #cecece;
+    text-align: center;
+    /*margin: 10px auto;*/
+    position: absolute;
+    /*top: 50%;*/
+    /*left: 50%;*/
+    width: auto;
+    /*transform: translate(-50%, -50%);*/
+
 }
 
 @media (min-width: 600px) and (max-width: 1000px) {
@@ -35,24 +60,41 @@
     }
 }
 
+#subtitle {
+    font-family: 'Quicksand', sans-serif;
+    color: #cecece;
+    text-align: center;
+    position: absolute;
+    margin: 10px auto;
+    top: 50%;
+    width: auto;
+}
+
 #start-arrow {
+    height: auto;
+    width: auto;
     position: absolute;
     top: 70%;
     left: 50%;
     animation-delay: 2.25s;
-    color: #262626;
     font-size: 2.5vw;
     opacity: 1;
+    color: #cecece;
 }
 
-#start-arrow:hover {
-    color: #8c8c8c;
-}
+    #start-arrow:hover {
+        color: #8c8c8c;
+    }
 
 #github-search {
     margin-top: 100%;
     width: 100%;
     z-index: 5;
     position: relative;
-    background-color: white;
+    color: #8c8c8c;
+}
+
+#search-button {
+    background-color: transparent;
+    color: white;
 }

@@ -10,6 +10,7 @@
     <link href="css/html5_default.css" rel="stylesheet"/>
     <link href="css/normalize.css" rel="stylesheet"/>
     <link href="css/main.css" rel="stylesheet"/>
+    <link href="css/hover-min.css" rel="stylesheet" media="all"/>
     <link href="content/animate.css" rel="stylesheet"/>
     <link href="content/animate.min.css" rel="stylesheet"/>
 
@@ -20,12 +21,20 @@
 
     <!-- Git' It Header And Navbar -->
     <section id="intro">
-        <div id="background" class="jumbotron vertical-center">
-            <p>
-                <h1 id="git-it" class="animated fadeInDown">Git' It!</h1>
-            </p>
+        <div class="container">
+            <div class="row">
+                <div id="background" class="jumbotron vertical-center">
 
-            <span id="start-arrow" class="glyphicon glyphicon-chevron-down animated fadeIn"></span>
+                    <h1 id="git-it" class="animated fadeInDown col-xs-12">Git' It!</h1>
+
+                    <p id="subtitle" class="animated fadeIn col-xs-12">
+                        A quick tool to help you find<br />
+                        information about your repos.
+                    </p>
+
+                    <span id="start-arrow" class="glyphicon glyphicon-chevron-down animated fadeIn col-xs-12"></span>
+                </div>
+            </div>
         </div>
     </section>
     <!-- End of Header And Navbar -->
@@ -36,17 +45,11 @@
             <div class="row">
 
                 <div id="search-area" class="col-sm-6">
-                    <p class="animated fadeInLeft">
-                        A quick tool to help you find<br />
-                        information about your repos.
-                    </p>
-                    <i>Search in the box to get started</i>
-
                     <!-- Organization Lookup -->
                     <form id="signup-form" method="post" action="#">
-                        <input type="text" name="organization" id="organization" placeholder="Organization" />
-                        <button type="submit" class="btn btn-sm">
-                            <i class="glyphicon glyphicon-search"></i> Search
+                        <input id="organization-search-box" class="hvr-underline-from-center" type="text" name="organization" placeholder="organization name" />
+                        <button id="search-button" type="submit" class="btn btn-sm">
+                            <i class="glyphicon glyphicon-search"></i>
                         </button>
                     </form>
                 </div>

@@ -69,6 +69,7 @@
     <Content Include="crossdomain.xml" />
     <Content Include="css\bootstrap-theme.min.css" />
     <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\hover-min.css" />
     <Content Include="css\html5_default.css" />
     <Content Include="css\main.css" />
     <Content Include="css\normalize.css" />
