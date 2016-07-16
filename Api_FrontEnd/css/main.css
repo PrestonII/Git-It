@@ -8,20 +8,7 @@ body {
     font-size: 12px;
 }
 
-input {
-    border: 0;
-    outline: 0;
-    background: transparent;
-    text-indent: 10px;
-}
 
-#info-display, #info-display2, #info-display3, #info-display4 {
-    height: 400px;
-    /*one way of centering the items*/
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 #background {
     top: 0;
@@ -30,28 +17,21 @@ input {
     min-height: 100vh;
     min-width: 100%;
     min-width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    
     z-index: 0;
     position: fixed;
     background-color: #262626;
+    color: #cecece;
 }
 
-#git-it {
-    font-size: 10vw;
-    font-family: 'Quicksand', sans-serif;
-    animation-delay: .5s;
-    animation-duration: 2s;
-    color: #cecece;
-    text-align: center;
-    /*margin: 10px auto;*/
-    position: absolute;
-    /*top: 50%;*/
-    /*left: 50%;*/
-    width: auto;
-    /*transform: translate(-50%, -50%);*/
+.centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+#row-title {
+    margin-top: 30%
 }
 
 @media (min-width: 600px) and (max-width: 1000px) {
@@ -60,31 +40,42 @@ input {
     }
 }
 
-#subtitle {
-    font-family: 'Quicksand', sans-serif;
-    color: #cecece;
-    text-align: center;
-    position: absolute;
-    margin: 10px auto;
-    top: 50%;
+#git-it {
+    font-size: 10vw;
+    animation-delay: .5s;
+    animation-duration: 2s;
     width: auto;
+    margin: 0;
+}
+
+#row-subtitle {
+    top: 20%;
+}
+
+#subtitle {
+    text-align: center;
+    margin: 10px auto;
+    width: auto;
+    animation-delay: 2.25s;
+    animation-duration: 1s;
+}
+
+#row-arrow {
+    margin-top: 5%;
 }
 
 #start-arrow {
     height: auto;
     width: auto;
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    animation-delay: 2.25s;
+    display: inherit;
+    animation-delay: 3.5s;
     font-size: 2.5vw;
     opacity: 1;
-    color: #cecece;
 }
 
-    #start-arrow:hover {
-        color: #8c8c8c;
-    }
+#start-arrow:hover {
+    color: #8c8c8c;
+}
 
 #github-search {
     margin-top: 100%;
@@ -94,7 +85,22 @@ input {
     color: #8c8c8c;
 }
 
+input {
+    border: 0;
+    outline: 0;
+    background: transparent;
+    text-indent: 10px;
+}
+
 #search-button {
     background-color: transparent;
     color: white;
+}
+
+#info-display, #info-display2, #info-display3, #info-display4 {
+    height: 400px;
+    /*one way of centering the items*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
