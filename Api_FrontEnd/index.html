@@ -46,20 +46,28 @@
         <div id="github-search" class="container">
             <div class="row">
 
-                <div id="search-area" class="col-sm-4 col-sm-offset-2">
+                <div id="search-area" class="col-sm-4">
                     <!-- Organization Lookup -->
-                    <h1 class="search-title">Search</h1>
-                    <form id="signup-form" method="post" action="#">
-                        <input id="organization-search-box" class="hvr-underline-from-center" type="text" name="organization" placeholder="organization name" />
-                        <button id="search-button" type="submit" class="btn btn-sm">
-                            <i class="glyphicon glyphicon-search"></i>
-                        </button>
-                    </form>
+                    <h1 class="search-display title">Search</h1>
+                    <div class="centered">
+                        <form id="signup-form" method="post" action="#">
+                            <input id="organization-search-box" class="hvr-underline-from-center" type="text" name="organization" placeholder="organization name"/>
+                            <button id="search-button" type="submit" class="btn btn-sm">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </form>
+
+                    </div>
+
+                    <h1 class="repo-display title">Repositories</h1>
+                    <div id="man-in-the-box">
+                        
+                    </div>
                 </div>
 
 
-                <div id="repo-display" class="col-sm-4 col-sm-offset-2">
-                    <h1 class="repo-box-title">Repositories</h1>
+                <div id="info-display" class="col-sm-4">
+                    <h1 class="repo-box title">Information</h1>
                 </div>
 
             </div>
