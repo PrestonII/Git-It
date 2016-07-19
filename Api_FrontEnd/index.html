@@ -56,19 +56,20 @@
                                 <i class="glyphicon glyphicon-search"></i>
                             </button>
                         </form>
-
                     </div>
+                    <!-- End Organization Lookup -->
 
                     <h1 class="repo-display title">Repositories</h1>
-                    <div id="man-in-the-box">
+                    <div ng-controller="RepositoryController" id="man-in-the-box">
                         
                     </div>
                 </div>
 
-
+                <!-- Display Information -->
                 <div id="info-display" class="col-sm-4">
                     <h1 class="repo-box title">Information</h1>
                 </div>
+                <!-- End  Display Information -->
 
             </div>
         </div>
@@ -77,8 +78,10 @@
 </div>
 
 <!-- Scripts -->
-<script src="js/vendor/jquery-1.10.2.min.js"></script>
-<script src="js/vendor/modernizr-2.6.2.min.js"></script>
-<script src="Scripts/source.js"></script>
+    <script src="js/vendor/jquery-1.10.2.min.js"></script>
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    <script src="Scripts/source.js"></script>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/controllers.js"></script>
 </body>
 </html>
