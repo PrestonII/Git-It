@@ -32,9 +32,13 @@
                         A quick tool to help you find<br/>
                         information about your repos.
                     </p>
+
+                </div>
+                <div class="row centered">
+                    <a href="https://github.com/PrestonII/Git-it/zipball/master" class="btn rounded-button animated fadeIn hvr-back-pulse">Download Source from GitHub</a>
                 </div>
                 <div id="row-arrow"class="row centered">
-                    <span id="start-arrow" class="glyphicon glyphicon-chevron-down animated fadeIn col-xs-6"></span>
+                    <span id="start-arrow" class="glyphicon glyphicon-chevron-down animated fadeInUp col-xs-6"></span>
                 </div>
             </div>
         </div>
@@ -44,9 +48,9 @@
     <!-- True Body Content -->
     <section id="display-area">
         <div id="github-search" class="container">
-            <div class="row">
-
-                <div id="search-area" class="col-sm-4">
+            <div class="row centered-horiz">
+                <!--<div id="divider" class="col-sm-2"></div>-->
+                <div id="search-area" class="col-sm-4 center-block">
                     <!-- Organization Lookup -->
                     <h1 class="search-display title">Search</h1>
                     <div class="centered">
@@ -60,17 +64,22 @@
                     <!-- End Organization Lookup -->
 
                     <h1 class="repo-display title">Repositories</h1>
-                    <div ng- id="man-in-the-box">
-                        
+                    <div ng- id="repos-in-the-box">
+                        <div class="info-box">
+                            
+                        </div>
                     </div>
                 </div>
 
                 <!-- Display Information -->
-                <div id="info-display" class="col-sm-4">
+                <div id="info-display" class="col-sm-4 center-block">
                     <h1 class="repo-box title">Information</h1>
+                    <div class="info-box">
+
+                    </div>
                 </div>
                 <!-- End  Display Information -->
-
+                <!--<div id="divider" class="col-sm-2"></div>-->
             </div>
         </div>
     </section>
