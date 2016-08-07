@@ -6,3 +6,4 @@
 /// <reference path="main.js" />
 /// <reference path="main_version2.js" />
 /// <reference path="server.js" />
+/// <reference path="../UnitTest.js" />

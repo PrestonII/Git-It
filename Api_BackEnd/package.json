@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "github": "^0.2.4",
+    "jasmine": "^2.4.1",
     "jquery": "^1.11.3",
     "typescript": "^1.8.10"
   }
