@@ -20,7 +20,7 @@
 
 <div id="page">
 
-    <!-- Git' It Header And Navbar -->
+    <!-- #region Git' It Header And Navbar -->
     <section id="intro">
 
         <div id="background" class="jumbotron vertical-center">
@@ -44,15 +44,16 @@
             </div>
         </div>
     </section>
-    <!-- End of Header And Navbar -->
+    <!-- #endregion End of Header And Navbar -->
 
-    <!-- True Body Content -->
+    <!-- #regeion True Body Content -->
     <section id="display-area">
         <div id="github-search" class="container">
             <div class="row centered-horiz">
                 <!--<div id="divider" class="col-sm-2"></div>-->
-                <div id="search-area" class="col-sm-4 center-block">
-                    <!-- Organization Lookup -->
+                <!--#region Search Area-->
+                <div id="search-area" class="col-sm-12 col-md-6 center-block">
+                    <!-- #region Organization Lookup -->
                     <h1 class="search-display title">Search</h1>
                     <div class="centered">
                         <form id="signup-form" method="post" action="#">
@@ -62,29 +63,30 @@
                             </button>
                         </form>
                     </div>
-                    <!-- End Organization Lookup -->
+                    <!-- #endregion End Organization Lookup -->
 
                     <h1 class="repo-display title">Repositories</h1>
-                    <div ng- id="repos-in-the-box">
+                    <div data-ng-repeat="" id="repos-in-the-box">
                         <div class="info-box">
-                            
+
                         </div>
                     </div>
                 </div>
+                <!--#endregion-->
 
-                <!-- Display Information -->
-                <div id="info-display" class="col-sm-4 center-block">
+                <!-- #region Display Information -->
+                <div id="info-display" class="col-sm-12 col-md-6 center-block">
                     <h1 class="repo-box title">Information</h1>
                     <div class="info-box">
 
                     </div>
                 </div>
-                <!-- End  Display Information -->
+                <!-- #endregion End  Display Information -->
                 <!--<div id="divider" class="col-sm-2"></div>-->
             </div>
         </div>
     </section>
-    <!-- End Of True Content -->
+    <!-- #endregion End Of True Content -->
 </div>
 
 <!-- Scripts -->
