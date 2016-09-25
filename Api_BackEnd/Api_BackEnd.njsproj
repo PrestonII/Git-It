@@ -13,7 +13,7 @@
     <ProjectGuid>9178b6ea-2207-4c6b-9bc6-438652dc8a15</ProjectGuid>
     <ProjectHome>
     </ProjectHome>
-    <StartupFile>scripts\main_version2.js</StartupFile>
+    <StartupFile>scripts\main_version3.js</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -32,12 +32,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="scripts\git\Commit.js" />
+    <Compile Include="scripts\git\Org3 - Copy.js" />
+    <Compile Include="scripts\git\Org3.js" />
     <Compile Include="scripts\main.js" />
     <Compile Include="scripts\git\File.js" />
     <Compile Include="scripts\main_version2.js" />
     <Compile Include="scripts\git\Repository.js" />
+    <Compile Include="scripts\main_version3.js" />
     <Compile Include="scripts\server.js" />
-    <Compile Include="scripts\git\Organization.js" />
     <Compile Include="scripts\_references.js" />
     <Compile Include="UnitTest.js">
       <SubType>Code</SubType>

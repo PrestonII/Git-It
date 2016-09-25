@@ -10,6 +10,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{57B28D73-6D33-4469-9B13-172E09A60A4B}"
 	ProjectSection(SolutionItems) = preProject
 		.gitattributes = .gitattributes
+		WebEssentials2015-Settings.json = WebEssentials2015-Settings.json
 	EndProjectSection
 EndProject
 Global

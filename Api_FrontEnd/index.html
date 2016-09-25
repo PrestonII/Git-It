@@ -15,11 +15,13 @@
     <link href="content/animate.css" rel="stylesheet"/>
     <link href="content/animate.min.css" rel="stylesheet"/>
 
+    <!-- Scripts -->
+    <script data-main="Scripts/init" src="Scripts/require.js"></script>
+
 </head>
 <body data-feedly-mini="yes">
 
-<div id="page">
-
+<div data-ng-app="git-it-app" id="page">
     <!-- #region Git' It Header And Navbar -->
     <section id="intro">
 
@@ -46,7 +48,7 @@
     </section>
     <!-- #endregion End of Header And Navbar -->
 
-    <!-- #regeion True Body Content -->
+    <!-- #region True Body Content -->
     <section id="display-area">
         <div id="github-search" class="container">
             <div class="row centered-horiz">
@@ -68,7 +70,7 @@
                     <h1 class="repo-display title">Repositories</h1>
                     <div id="repos-in-the-box" class="">
                         <div class="info-box">
-
+                            
                         </div>
                     </div>
                 </div>
@@ -88,12 +90,5 @@
     </section>
     <!-- #endregion End Of True Content -->
 </div>
-
-<!-- Scripts -->
-    <script src="js/vendor/jquery-1.10.2.min.js"></script>
-    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
-    <script src="Scripts/source.js"></script>
-    <script src="Scripts/angular.min.js"></script>
-    <script src="Scripts/controllers.js"></script>
 </body>
 </html>

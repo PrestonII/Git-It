@@ -1,8 +1,4 @@
 {
-  "name": "NodejsWebApp1",
-  "version": "0.0.0",
-  "description": "NodejsWebApp1",
-  "main": "server.js",
   "author": {
     "name": "Preston",
     "email": ""
@@ -11,6 +7,11 @@
     "github": "^0.2.4",
     "jasmine": "^2.4.1",
     "jquery": "^1.11.3",
-    "typescript": "^1.8.10"
-  }
+    "typescript": "^1.8.10",
+    "xmlhttprequest": "^1.8.0"
+  },
+  "description": "GitIt",
+  "main": "server.js",
+  "name": "GithubApp",
+  "version": "1.0.0"
 }
