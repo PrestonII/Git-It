@@ -1,4 +1,4 @@
-﻿(function(GITAPP) {
+var GITAPP = (function(GITAPP) {
 
     GITAPP.Organization = function(orgName) {
         self = this;

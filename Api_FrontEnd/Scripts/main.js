@@ -1,6 +1,7 @@
-requirejs(["jquery", "GITAPP"], function($, GITAPP) {
+requirejs(["jquery", "GITAPP"], function($) {
 
     console.log($);
+    console.log(GITAPP);
 
     $("#start-arrow").click(function() {
         $("#github-search").animate({
