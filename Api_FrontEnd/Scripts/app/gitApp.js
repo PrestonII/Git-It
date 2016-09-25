@@ -2,21 +2,22 @@ if (!GITAPP)
     var GITAPP = {};
 
 var GITAPP = (function (GITAPP) {
-
-    // modify here as necessary
     
     GITAPP.Organization = function(orgName) {
-            self = this;
-            this.name = orgName || "greySMITH-BIM";
-            this.repositories = [];
-            this.initialize();
-        }
+        self = this;
+        this.name = (!orgName || orgName === "")
+            ? "greySMITH-BIM"
+            : orgName;
+        
+        this.repositories = [];
+        this.initialize();
+    }
 
     GITAPP.Organization.prototype = {
 
         initialize:
             function() {
-                var organization = this.getOrganizationInformation();
+                this.getOrganizationInformation();
             },
 
         getOrganizationInformation:
