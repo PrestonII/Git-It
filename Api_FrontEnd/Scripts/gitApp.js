@@ -3,7 +3,6 @@ requirejs(["jquery", "Organization"], function ($, Organization) {
     var self = this;
     this.organization = {};
 
-
     $("#search-button").click(function (event) {
         event.preventDefault();
         var searchName = $("#organization-search-box")[0].value;
