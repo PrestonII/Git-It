@@ -1,5 +1,5 @@
 ﻿<!doctype html>
-<html class="no-js" lang="en-us">
+<html class="no-js" lang="en-us" data-ng-app="gitApp" >
 <head>
     <title>Git' It - A Quick Repository Search Tool</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1"/>
@@ -21,7 +21,7 @@
 </head>
 <body data-feedly-mini="yes">
 
-<div data-ng-app="git-it-app" id="page">
+<div id="page">
     <!-- #region Git' It Header And Navbar -->
     <section id="intro">
 
@@ -75,8 +75,16 @@
 
                     <h1 class="repo-display title">Repositories</h1>
                     <div id="repos-in-the-box" class="">
-                        <div class="info-box">
-
+                        <div id="info-box" data-ng-controller="repoController">
+                            Name:
+                            <br/>
+                            <input type="text" data-ng-model="name"/>
+                            <br/>
+                            <ul>
+                                <li data-ng-repeat="repo in repositories | filter: name | orderBy">
+                                    {{repo.name}} - {{repo.location}}
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>

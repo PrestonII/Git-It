@@ -64,7 +64,6 @@
     <Content Include="Scripts\app\Repository.js" />
     <Content Include="Scripts\init.js" />
     <Content Include="Scripts\app\git-it.js" />
-    <Content Include="Scripts\app\gitApp.js" />
     <Content Include="Scripts\app\Organization.js" />
     <Content Include="Content\animate.css" />
     <Content Include="Content\animate.min.css" />
@@ -85,7 +84,8 @@
     <Content Include="humans.txt" />
     <Content Include="img\.gitignore" />
     <Content Include="index.html" />
-    <Content Include="Scripts\main.js" />
+    <Content Include="Scripts\gitApp.js" />
+    <Content Include="Scripts\repoController.js" />
     <Content Include="Scripts\vendor\bootstrap.min.js" />
     <Content Include="Scripts\vendor\jquery-1.10.2.min.js" />
     <Content Include="Scripts\vendor\modernizr-2.6.2.min.js" />
@@ -112,6 +112,7 @@
     <Content Include="Scripts\vendor\controllers.js" />
     <Content Include="Scripts\r.js" />
     <Content Include="Scripts\require.js" />
+    <None Include="_references.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -143,7 +144,9 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Scripts\models\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

@@ -9,8 +9,16 @@ requirejs.config({
         Repository:         "app/Repository",
         Commit:             "app/Commit",
         File:               "app/File",
-        main:               "main"
+        app:                "app"
+    },
+
+    shim: {
+        angular: {
+            exports: 'angular'
+        }
     }
 });
 
-requirejs(["main"]);
+requirejs(["app"], function(app) {
+    app.start();
+});
