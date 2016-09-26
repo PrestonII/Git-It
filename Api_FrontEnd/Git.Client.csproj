@@ -60,6 +60,7 @@
   <ItemGroup>
     <Content Include="404.html" />
     <Content Include="apple-touch-icon-precomposed.png" />
+    <Content Include="Scripts\app\animationmanager.js" />
     <Content Include="Scripts\app\Repository.js" />
     <Content Include="Scripts\init.js" />
     <Content Include="Scripts\app\git-it.js" />
@@ -111,7 +112,6 @@
     <Content Include="Scripts\vendor\controllers.js" />
     <Content Include="Scripts\r.js" />
     <Content Include="Scripts\require.js" />
-    <None Include="Scripts\_references.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

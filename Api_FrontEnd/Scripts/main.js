@@ -10,9 +10,6 @@ requirejs(["jquery", "Organization"], function($, Organization) {
 
         console.log(searchName);
 
-        // this will still work
-        //self.organization = new GITAPP.Organization(orgName);
-
         self.organization = new Organization(searchName);
         
     });
@@ -22,6 +19,12 @@ requirejs(["jquery", "Organization"], function($, Organization) {
                     marginTop: 0
                 },500);
     });
+
+    $("#close-button").click(function() {
+        $("#github-search").animate({
+            marginTop: "100%"
+        }, 500);
+    })
 });
 
 
