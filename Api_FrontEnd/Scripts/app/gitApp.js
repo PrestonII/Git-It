@@ -1,5 +1,10 @@
+// THE GLOBAL WAY OF DOING IT
+
+
 if (!GITAPP)
     var GITAPP = {};
+
+GITAPP.Organization = {};
 
 var GITAPP = (function (GITAPP) {
     

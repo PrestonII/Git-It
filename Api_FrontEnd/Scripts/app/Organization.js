@@ -1,47 +1,94 @@
-var GITAPP = (function(GITAPP) {
+define("Organization",
+    ["Repository"],
+    (function (Repository) {
 
-    GITAPP.Organization = function(orgName) {
-        self = this;
-        this.name = orgName || "greySMITH-BIM";
-        this.repositories = [];
-        this.initialize();
-    }
+        Organization = function(searchName) {
+            self = this;
 
-    GITAPP.Organization.prototype = {
+            this.name = (!searchName || "" === searchName)
+                ? "greySMITH-BIM"
+                : searchName;
 
-        initialize:
-            function() {
-                var organization = this.getOrganizationInformation();
-            },
+            this.mainUrl = "https://api.github.com/orgs/" + self.name;
+            this.repositories = [];
+            this.initialize();
+        }
 
-        getOrganizationInformation:
-            function() {
-                var xhr = new XMLHttpRequest();
-                var orgUrl = "https://api.github.com/orgs/" + self.name;
+        Organization.prototype = {
+            initialize:
+                function() {
+                    this.getOrganizationInformation();
+                },
 
-                xhr.open("GET", orgUrl, false);
-                xhr.send();
+            getObjectsFromGithub: 
+                function(url) {
+                    var xhr = new XMLHttpRequest();
 
-                console.log(xhr.status);
+                    xhr.open("GET", url, false);
+                    xhr.send();
 
-                if (xhr.status !== 200)
-                    throw "Couldn't get the information";
+                    console.log(xhr.status);
 
-                var org = JSON.parse(xhr.responseText);
+                    if (xhr.status !== 200)
+                        throw "Couldn't get the information";
 
-                return org;
-            },
+                    var obj = JSON.parse(xhr.responseText);
 
-        addRepositories:
-            function (repoColl) {
-                for (var n = 0; n < repoColl.length; n++) {
-                    self.repositories.push(repoColl[n]);
+                    return obj;
+            
+                },
 
-                    console.log(repoColl[n]);
+            getOrganizationInformation:
+                function() {
+                    var xhr = new XMLHttpRequest();
+
+                    xhr.open("GET", this.mainUrl, false);
+                    xhr.send();
+
+                    console.log(xhr.status);
+
+                    if (xhr.status !== 200)
+                        throw "Couldn't get the information";
+
+                    var org = JSON.parse(xhr.responseText);
+                    this.repositories = this.getRepositories();
+
+                    return org;
+                },
+
+            getRepositories:
+                function() {
+                    var repoUrl = self.mainUrl + "/repos";
+
+                    var repos = this.getObjectsFromGithub(repoUrl);
+
+                    console.log(repos);
+
+                    var repoCollection = [];
+                    for (var n = 0; n < repos.length; n++) {
+                        var gitRepo = new Repository(repos[n]);
+
+                        console.log(gitRepo);
+
+                        repoCollection.push(gitRepo);
+                    }
+
+                    return repoCollection;
+                },
+
+            createRepositories:
+                function(repoColl) {
+                    var repos = [];
+
+                    for (var n = 0; n < repoColl.length; n++) {
+                        var repoInfo = repoColl[n];
+
+
+                        console.log(repoColl[n]);
+                    }
                 }
-            }
+        }
+
+        return Organization;
     }
-
-    return GITAPP.Organization;
-
-})(GITAPP);
+));
