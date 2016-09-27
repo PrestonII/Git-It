@@ -2,7 +2,7 @@ requirejs.config({
     baseUrl: "../Scripts",
     paths: {
         angular:            "vendor/angular.min",
-        ngRoute:            "vendor/angular.route.min",
+        ngRoute:            "vendor/angular-route.min",
 
         jquery:             "vendor/jquery-1.10.2.min",
         bootstrap:          "vendor/bootstrap.min",
