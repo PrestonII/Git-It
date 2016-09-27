@@ -4,6 +4,7 @@
 /// <reference path="Scripts/app/git-it.js" />
 /// <reference path="Scripts/app/Organization.js" />
 /// <reference path="Scripts/app/Repository.js" />
+/// <reference path="scripts/controllers.js" />
 /// <reference path="scripts/gitapp.js" />
 /// <reference path="scripts/gitapp2.js" />
 /// <reference path="Scripts/init.js" />

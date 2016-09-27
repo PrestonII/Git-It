@@ -9,7 +9,9 @@ requirejs.config({
         Repository:         "app/Repository",
         Commit:             "app/Commit",
         File:               "app/File",
+
         gitApp:             "gitApp",
+        //controllers:        "controllers",
 
         app:                "app"
     },
@@ -25,4 +27,6 @@ requirejs.config({
     }
 });
 
-requirejs(["app"]);
+requirejs(["app"], function(app) {
+    app.init();
+});

@@ -11,6 +11,10 @@
 
     var app = angular.module('gitApp', []);
 
+    app.init = function() {
+        angular.bootstrap(document, ['gitApp']);
+    }
+
     var controllers = {};
     controllers.SimpleController = function($scope) {
         $scope.repositories = [

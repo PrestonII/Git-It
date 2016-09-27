@@ -63,6 +63,7 @@
     <Content Include="Scripts\app.js" />
     <Content Include="Scripts\app\animationmanager.js" />
     <Content Include="Scripts\app\Repository.js" />
+    <Content Include="Scripts\controllers.js" />
     <Content Include="Scripts\gitApp2.js" />
     <Content Include="Scripts\init.js" />
     <Content Include="Scripts\app\git-it.js" />
