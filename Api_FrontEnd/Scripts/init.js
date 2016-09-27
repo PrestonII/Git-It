@@ -11,6 +11,7 @@ requirejs.config({
         File:               "app/File",
 
         gitApp:             "gitApp",
+        animationManager:   "animationManager",
         //controllers:        "controllers",
 
         app:                "app"

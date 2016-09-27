@@ -1,18 +1,19 @@
-﻿define("app", function (require) {
+define("app", function (require) {
     'use strict';
 
+    self = this;
     var $ = require("jquery");
     var angular = require("angular");
     var Organization = require("Organization");
-
-    console.log($);
-    console.log(angular);
-    console.log(Organization);
-
+    var AnimationManager = require("animationManager");
     var app = angular.module('gitApp', []);
+
+    var mgr = {};
 
     app.init = function() {
         angular.bootstrap(document, ['gitApp']);
+        mgr = new AnimationManager();
+        mgr.loadAnimations();
     }
 
     var controllers = {};
@@ -29,6 +30,7 @@
     app.controller(controllers);
 
 
+    // resolve this initialization stuff later
 
     $("#search-button").click(function (event) {
         event.preventDefault();
@@ -39,23 +41,5 @@
         var organization = new Organization(searchName);
     });
 
-    $("#start-arrow").click(function () {
-        $("#github-search").animate({
-            marginTop: 0
-        }, 500);
-    });
-
-    $("#close-button")
-        .click(function () {
-            $("#github-search")
-                .animate({
-                    marginTop: "100%"
-                },
-                    500);
-        });
-
-
     return app;
-
-
 });
