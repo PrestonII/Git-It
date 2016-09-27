@@ -9,9 +9,9 @@ requirejs.config({
         Repository:         "app/Repository",
         Commit:             "app/Commit",
         File:               "app/File",
-        app:                "gitApp",
+        gitApp:             "gitApp",
 
-        otherApp:           "otherApp"
+        app:                "app"
     },
 
     shim: {
@@ -25,4 +25,4 @@ requirejs.config({
     }
 });
 
-requirejs(["otherApp"]);
+requirejs(["app"]);
