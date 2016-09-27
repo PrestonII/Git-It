@@ -1,4 +1,4 @@
-define("app", function (require) {
+﻿define("app", function (require) {
     'use strict';
 
     self = this;
@@ -26,12 +26,9 @@ define("app", function (require) {
         ];
     };
 
-    //app.controller("SimpleController", simpleController);
     app.controller(controllers);
 
-
     // resolve this initialization stuff later
-
     $("#search-button").click(function (event) {
         event.preventDefault();
         var searchName = $("#organization-search-box")[0].value;

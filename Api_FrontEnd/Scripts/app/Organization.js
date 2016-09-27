@@ -1,6 +1,5 @@
-define("Organization",
-    ["Repository"],
-    (function (Repository) {
+define("Organization", ["Repository"],
+    function (Repository) {
 
         Organization = function(searchName) {
             self = this;
@@ -91,4 +90,4 @@ define("Organization",
 
         return Organization;
     }
-));
+);
