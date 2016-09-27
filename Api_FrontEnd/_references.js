@@ -6,6 +6,7 @@
 /// <reference path="Scripts/app/Repository.js" />
 /// <reference path="scripts/gitapp.js" />
 /// <reference path="Scripts/init.js" />
+/// <reference path="scripts/otherapp.js" />
 /// <reference path="Scripts/r.js" />
 /// <reference path="scripts/repocontroller.js" />
 /// <reference path="Scripts/require.js" />

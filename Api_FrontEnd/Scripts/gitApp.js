@@ -10,7 +10,6 @@ requirejs(["jquery", "Organization"], function ($, Organization) {
         console.log(searchName);
 
         self.organization = new Organization(searchName);
-
     });
 
     $("#start-arrow").click(function () {
