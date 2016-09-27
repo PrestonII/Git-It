@@ -62,15 +62,11 @@
     <Content Include="apple-touch-icon-precomposed.png" />
     <Content Include="Partials\repoList2.html" />
     <Content Include="Partials\repoList.html" />
-    <Content Include="Scripts\animationManager.js" />
+    <Content Include="Scripts\system\animationManager.js" />
     <Content Include="Scripts\app.js" />
-    <Content Include="Scripts\app\animationmanager.js" />
-    <Content Include="Scripts\app\Repository.js" />
-    <Content Include="Scripts\controllers.js" />
-    <Content Include="Scripts\gitApp2.js" />
+    <Content Include="Scripts\app\objs\Repository.js" />
     <Content Include="Scripts\init.js" />
-    <Content Include="Scripts\app\git-it.js" />
-    <Content Include="Scripts\app\Organization.js" />
+    <Content Include="Scripts\app\objs\Organization.js" />
     <Content Include="Content\animate.css" />
     <Content Include="Content\animate.min.css" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -90,39 +86,37 @@
     <Content Include="humans.txt" />
     <Content Include="img\.gitignore" />
     <Content Include="index.html" />
-    <Content Include="Scripts\gitApp.js" />
-    <Content Include="Scripts\otherApp.js" />
-    <Content Include="Scripts\repoController.js" />
-    <Content Include="Scripts\vendor\bootstrap.min.js" />
-    <Content Include="Scripts\vendor\jquery-1.10.2.min.js" />
-    <Content Include="Scripts\vendor\modernizr-2.6.2.min.js" />
+    <Content Include="Scripts\app\modules\gitApp.js" />
+    <Content Include="Scripts\_lib\bootstrap.min.js" />
+    <Content Include="Scripts\_lib\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\_lib\modernizr-2.6.2.min.js" />
     <Content Include="robots.txt" />
     <Content Include="packages.config" />
     <Content Include="Content\bootstrap.min.css.map" />
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
-    <Content Include="Scripts\vendor\angular-animate.js" />
-    <Content Include="Scripts\vendor\angular-animate.min.js" />
-    <Content Include="Scripts\vendor\angular-mocks.js" />
-    <Content Include="Scripts\vendor\angular-resource.js" />
-    <Content Include="Scripts\vendor\angular-resource.min.js" />
-    <Content Include="Scripts\vendor\angular-route.js">
+    <Content Include="Scripts\_lib\angular-animate.js" />
+    <Content Include="Scripts\_lib\angular-animate.min.js" />
+    <Content Include="Scripts\_lib\angular-mocks.js" />
+    <Content Include="Scripts\_lib\angular-resource.js" />
+    <Content Include="Scripts\_lib\angular-resource.min.js" />
+    <Content Include="Scripts\_lib\angular-route.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Scripts\vendor\angular-route.min.js">
+    <Content Include="Scripts\_lib\angular-route.min.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Scripts\vendor\angular-animate.min.js.map" />
-    <Content Include="Scripts\vendor\angular-resource.min.js.map" />
-    <Content Include="Scripts\vendor\angular-route.min.js.map" />
-    <Content Include="Scripts\vendor\angular.js">
+    <Content Include="Scripts\_lib\angular-animate.min.js.map" />
+    <Content Include="Scripts\_lib\angular-resource.min.js.map" />
+    <Content Include="Scripts\_lib\angular-route.min.js.map" />
+    <Content Include="Scripts\_lib\angular.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Scripts\vendor\angular.min.js" />
-    <Content Include="Scripts\vendor\angular.min.js.map" />
-    <Content Include="Scripts\vendor\bootstrap.js" />
-    <Content Include="Scripts\vendor\controllers.js" />
+    <Content Include="Scripts\_lib\angular.min.js" />
+    <Content Include="Scripts\_lib\angular.min.js.map" />
+    <Content Include="Scripts\_lib\bootstrap.js" />
+    <Content Include="Scripts\_lib\controllers.js" />
     <Content Include="Scripts\r.js" />
     <Content Include="Scripts\require.js" />
     <None Include="_references.js" />
@@ -158,7 +152,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Scripts\models\" />
+    <Folder Include="Scripts\app\controllers\" />
+    <Folder Include="Scripts\app\directives\" />
+    <Folder Include="Scripts\app\models\" />
+    <Folder Include="Scripts\app\services\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

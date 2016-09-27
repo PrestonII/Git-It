@@ -1,21 +1,20 @@
 requirejs.config({
     baseUrl: "../Scripts",
     paths: {
-        angular:            "vendor/angular.min",
-        ngRoute:            "vendor/angular-route.min",
+        angular:            "_lib/angular.min",
+        ngRoute:            "_lib/angular-route.min",
 
-        jquery:             "vendor/jquery-1.10.2.min",
-        bootstrap:          "vendor/bootstrap.min",
+        jquery:             "_lib/jquery-1.10.2.min",
+        bootstrap:          "_lib/bootstrap.min",
         
-        Organization:       "app/Organization",
-        Repository:         "app/Repository",
-        Commit:             "app/Commit",
-        File:               "app/File",
+        Organization:       "app/objs/Organization",
+        Repository:         "app/objs/Repository",
+        Commit:             "app/objs/Commit",
+        File:               "app/objs/File",
 
-        gitApp:             "gitApp",
-        animationManager:   "animationManager",
-        //controllers:        "controllers",
+        animationManager:   "system/animationManager",
 
+        gitApp:             "app/modules/gitApp",
         app:                "app"
     },
 
