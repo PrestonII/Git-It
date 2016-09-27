@@ -60,6 +60,8 @@
   <ItemGroup>
     <Content Include="404.html" />
     <Content Include="apple-touch-icon-precomposed.png" />
+    <Content Include="Partials\repoList2.html" />
+    <Content Include="Partials\repoList.html" />
     <Content Include="Scripts\animationManager.js" />
     <Content Include="Scripts\app.js" />
     <Content Include="Scripts\app\animationmanager.js" />

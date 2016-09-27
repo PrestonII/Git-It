@@ -1,0 +1,22 @@
+﻿<div class="container">
+    <h2>Repositories</h2>
+    Name:
+    <br/>
+    <input type="text" data-ng-model="filter.name"/>
+    <br />
+    <ul>
+        <li data-ng-repeat="repo in repositories | filter: filter.name | orderBy">
+            {{repo.name}} - {{repo.location}}
+        </li>
+    </ul>
+
+    <br/>
+    Repo Name:
+    <br/>
+    <input type="text" data-ng-model="newRepo.name"/>
+    <br />
+    Repo Location:
+    <br />
+    <input type="text" data-ng-model="newRepo.location"/>
+    <button data-ng-click="addRepo()">Add Repo</button>
+</div>

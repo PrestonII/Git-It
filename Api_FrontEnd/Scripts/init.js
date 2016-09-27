@@ -1,8 +1,10 @@
 requirejs.config({
     baseUrl: "../Scripts",
     paths: {
-        jquery:             "vendor/jquery-1.10.2.min",
         angular:            "vendor/angular.min",
+        ngRoute:            "vendor/angular.route.min",
+
+        jquery:             "vendor/jquery-1.10.2.min",
         bootstrap:          "vendor/bootstrap.min",
         
         Organization:       "app/Organization",
@@ -18,6 +20,11 @@ requirejs.config({
     },
 
     shim: {
+        ngRoute: {
+            deps: ['angular'],
+            exports: 'ngRoute'
+        },
+
         angular: {
             exports: 'angular'
         },

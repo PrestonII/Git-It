@@ -75,16 +75,7 @@
 
                     <h1 class="repo-display title">Repositories</h1>
                     <div id="repos-in-the-box" class="">
-                        <div id="info-box" data-ng-controller="SimpleController">
-                            Name:
-                            <br/>
-                            <input type="text" data-ng-model="name"/>
-                            <br/>
-                            <ul>
-                                <li data-ng-repeat="repo in repositories | filter: name | orderBy">
-                                    {{repo.name}} - {{repo.location}}
-                                </li>
-                            </ul>
+                        <div id="info-box" data-ng-view>
                         </div>
                     </div>
                 </div>
