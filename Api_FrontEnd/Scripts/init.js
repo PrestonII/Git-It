@@ -9,14 +9,20 @@ requirejs.config({
         Repository:         "app/Repository",
         Commit:             "app/Commit",
         File:               "app/File",
-        app:                "gitApp"
+        app:                "gitApp",
+
+        otherApp:           "otherApp"
     },
 
     shim: {
         angular: {
             exports: 'angular'
+        },
+
+        jquery: {
+            exports: 'jquery'
         }
     }
 });
 
-requirejs(["app"]);
+requirejs(["otherApp"]);

@@ -18,10 +18,13 @@ requirejs(["jquery", "Organization"], function ($, Organization) {
         }, 500);
     });
 
-    $("#close-button").click(function () {
-        $("#github-search").animate({
-            marginTop: "100%"
-        }, 500);
-    })
+    $("#close-button")
+        .click(function() {
+            $("#github-search")
+                .animate({
+                        marginTop: "100%"
+                    },
+                    500);
+        });
 });
 
