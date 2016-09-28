@@ -20,7 +20,8 @@ requirejs.config({
 
     shim: {
         ngRoute: {
-            deps: ['angular']
+            deps: ['angular'],
+            exports: 'angular'
         },
 
         angular: {

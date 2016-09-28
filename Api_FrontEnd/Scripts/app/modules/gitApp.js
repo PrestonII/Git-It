@@ -5,27 +5,19 @@ define("gitApp", ['angular', 'ngRoute'],
 
         appLoader.prototype = {
             load: function() {
-                var gitapp = angular.module("gitApp", ['ngRoute']);
+                var gitapp = angular.module("gitApp", []);
 
                 console.log(gitapp);
                 console.log(angular);
-                //console.log(ngRoute);
 
-                gitapp.config(['$routeProvider'],
-                    function($routeProvider) {
-                        $routeProvider
-                            .when('.',
-                            {
-                                controller: 'SimpleController',
-                                templateUrl: 'Partials/repoList.html'
-                            })
-                            .when('/partial2',
-                            {
-                                controller: 'SimpleController',
-                                templateUrl: 'Partials/repoList2.html'
-                            })
-                            .otherwise({ redirectTo: "/" });
-                    });
+                //gitapp.config(['$routeProvider'],function($routeProvider) {
+                //    $routeProvider
+
+                //        .when('.', { controller: 'SimpleController', templateUrl: 'Partials/repoList.html' })
+                //        .when('/partial2',{ controller: 'SimpleController', templateUrl: 'Partials/repoList2.html' })
+                //        .otherwise({ redirectTo: "/" });
+
+                //    });
 
                 var controllers = {};
 
