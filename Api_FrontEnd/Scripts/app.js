@@ -12,9 +12,9 @@
     var mgr = {};
 
     app.init = function () {
-        var gitapp = new GitApp();
-        gitapp.load();
-        angular.bootstrap(document, ['gitApp']);
+        var appLoader = new GitApp();
+        var gitapp = appLoader.load();
+        angular.bootstrap(document, ['gitApp'], gitapp.config);
         mgr = new AnimationManager();
         mgr.loadAnimations();
     }
