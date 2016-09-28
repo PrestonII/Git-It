@@ -10,18 +10,9 @@ define("gitApp", ['angular', 'ngRoute'],
                 console.log(gitapp);
                 console.log(angular);
 
-                //gitapp.config(['$routeProvider'],function($routeProvider) {
-                //    $routeProvider
-
-                //        .when('.', { controller: 'SimpleController', templateUrl: 'Partials/repoList.html' })
-                //        .when('/partial2',{ controller: 'SimpleController', templateUrl: 'Partials/repoList2.html' })
-                //        .otherwise({ redirectTo: "/" });
-
-                //    });
-
                 var controllers = {};
 
-                controllers.SimpleController = function($scope) {
+                controllers.RepoController = function($scope) {
                     $scope.repositories = [
                         { name: "black", location: "x" },
                         { name: "blue", location: "y" },
@@ -35,6 +26,26 @@ define("gitApp", ['angular', 'ngRoute'],
                             location: $scope.newRepo.location
                         });
                     };
+                };
+
+                controllers.InfoController = function($scope) {
+                    $scope.repoInfo = [
+                        {
+                            id: 1946163131,
+                            name: "GreySMITHLibrary",
+                            ssh_url: "Sp,et/fadsfsaff/fasff.com"
+                        },
+                        {
+                            id: 936463131,
+                            name: "Algorithms",
+                            ssh_url: "Sp,et/fadsfsaff/fasff.com"
+                        },
+                        {
+                            id: 44613168,
+                            name: "Testing",
+                            ssh_url: "Sp,et/fadsfsaff/fasff.com"
+                        },
+                    ];
                 };
 
                 gitapp.controller(controllers);
