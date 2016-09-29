@@ -141,6 +141,14 @@ body {
     height: auto;
     
 }
+#filter {
+    margin-left: 20px;
+}
+
+#filter-entry {
+    margin-left: 20px;
+    border-bottom: 3px solid white;
+}
 
 #info-display {
     /*border: 1px solid blue;*/
@@ -193,8 +201,8 @@ input {
 #repo-box {
     width: 100%;
     height: 100%;
+    min-height: 100%;
     background-color: dimgrey;
-    /*opacity: .2;*/
     border: 1px solid red;
     overflow: hidden;
 }
@@ -205,8 +213,7 @@ input {
 }
 
 #info-box {
-    width: 95%;
-    height: auto;
+    width: 100%;
+    height: 100%;
     background-color: dimgrey;
-    /*opacity: .2;*/
 }

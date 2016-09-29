@@ -76,10 +76,8 @@
                     <h1 class="repo-display title">Repositories</h1>
                     <div id="repos-in-the-box" class="">
                         <div id="repo-box" >
-                            <h2>Selector</h2>
-                            Name:
-                            <br />
-                            <input type="text" data-ng-model="filter.name" />
+                            <h2 id="filter">Filter</h2>
+                            <input id="filter-entry" type="text" data-ng-model="filter.name" />
                             <br />
                             <ul>
                                 <li data-ng-repeat="repo in repositories | filter: filter.name | orderBy">

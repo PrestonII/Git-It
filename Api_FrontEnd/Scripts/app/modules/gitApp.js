@@ -1,5 +1,5 @@
-define("gitApp", ['angular', 'Organization'],
-    function (angular, Organization) {
+define("gitApp", ['angular', 'Organization', 'ngRoute', 'ngResource'],
+    function (angular, Organization, ngRoute, ngResource) {
 
         var appLoader = function () {
             var self = this;
@@ -9,11 +9,25 @@ define("gitApp", ['angular', 'Organization'],
         appLoader.prototype = {
             organization: {},
 
-            load: function() {
+            load: function () {
+                console.log(angular);
+                console.log(ngRoute);
+                console.log(ngResource);
+
                 var gitapp = angular.module("gitApp", []);
 
-                console.log(gitapp);
-                console.log(angular);
+                //gitapp.config([
+                //    '$routeProvider', function($routeProvider) {
+
+                //        $routeProvider
+                //            .when('/',
+                //            {
+                //                templateUrl: 'Partials/repoList.html',
+                //                controller: 'SimpleController'
+                //            })
+                //            .otherwise({ redirectTo: '/' });
+                //    }
+                //]);
 
                 var controllers = {};
 
@@ -36,23 +50,7 @@ define("gitApp", ['angular', 'Organization'],
                 };
 
                 controllers.InfoController = function($scope) {
-                    $scope.repoInfo = [
-                        {
-                            id: 1946163131,
-                            name: "GreySMITHLibrary",
-                            ssh_url: "Sp,et/fadsfsaff/fasff.com"
-                        },
-                        {
-                            id: 936463131,
-                            name: "Algorithms",
-                            ssh_url: "Sp,et/fadsfsaff/fasff.com"
-                        },
-                        {
-                            id: 44613168,
-                            name: "Testing",
-                            ssh_url: "Sp,et/fadsfsaff/fasff.com"
-                        },
-                    ];
+                    $scope.repoInfo = [];
                 };
 
                 gitapp.controller(controllers);
