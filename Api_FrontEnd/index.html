@@ -60,13 +60,13 @@
             <div class="row centered-horiz">
                 <!--<div id="divider" class="col-sm-2"></div>-->
                 <!--#region Search Area-->
-                <div id="search-area" class="col-sm-12 col-md-6 center-block">
+                <div id="search-area" class="col-sm-12 col-md-6 center-block" data-ng-controller="RepoController">
                     <!-- #region Organization Lookup -->
                     <h1 class="search-display title">Search</h1>
                     <div class="centered">
                         <form id="signup-form" method="post" action="#">
                             <input id="organization-search-box" class="hvr-underline-from-center" type="text" name="organization" placeholder="organization name"/>
-                            <button id="search-button" type="button" class="btn btn-sm">
+                            <button id="search-button" type="button" class="btn btn-sm" data-ng-click="findOrganization()">
                                 <i class="glyphicon glyphicon-search"></i>
                             </button>
                         </form>
@@ -75,7 +75,7 @@
 
                     <h1 class="repo-display title">Repositories</h1>
                     <div id="repos-in-the-box" class="">
-                        <div id="repo-box" data-ng-controller="RepoController">
+                        <div id="repo-box" >
                             <h2>Selector</h2>
                             Name:
                             <br />

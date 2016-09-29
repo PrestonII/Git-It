@@ -8,25 +8,25 @@ define("Repository",
     [],
     function () {
 
-        Repository = function(gitrepo) {
-            self = this;
+        var Repository = function (gitrepo) {
             this.id = null;
             this.name = "";
             this.ssh_url = null;
             this.commits_locations = null;
+
             this.initialize(gitrepo);
         }
 
         Repository.prototype = {
             initialize: 
                 function(repo) {
-                    self.id = repo.id;
-                    self.name = repo.name;
-                    self.ssh_url = repo.ssh_url;
-                    self.commits_locations = repo.commits_url;
+                    this.id = repo.id;
+                    this.name = repo.name;
+                    this.ssh_url = repo.ssh_url;
+                    this.commits_locations = repo.commits_url;
 
-                    console.log(self.id);
-                    console.log(self.name);
+                    console.log(this.id);
+                    console.log(this.name);
                 },
 
             calculateTotalLinesAdded: 

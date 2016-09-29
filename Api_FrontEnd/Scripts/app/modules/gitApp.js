@@ -1,9 +1,14 @@
-define("gitApp", ['angular', 'ngRoute'],
-    function (angular) {
-        var appLoader = function() {
+define("gitApp", ['angular', 'Organization'],
+    function (angular, Organization) {
+
+        var appLoader = function () {
+            var self = this;
+            console.log(Organization);
         };
 
         appLoader.prototype = {
+            organization: {},
+
             load: function() {
                 var gitapp = angular.module("gitApp", []);
 
@@ -13,12 +18,7 @@ define("gitApp", ['angular', 'ngRoute'],
                 var controllers = {};
 
                 controllers.RepoController = function($scope) {
-                    $scope.repositories = [
-                        { name: "black", location: "x" },
-                        { name: "blue", location: "y" },
-                        { name: "blue", location: "y" },
-                        { name: "red", location: "z" }
-                    ];
+                    $scope.repositories = [];
 
                     $scope.addRepo = function() {
                         $scope.repositories.push({
@@ -26,6 +26,13 @@ define("gitApp", ['angular', 'ngRoute'],
                             location: $scope.newRepo.location
                         });
                     };
+
+                    $scope.findOrganization = function() {
+                        var searchName = $("#organization-search-box")[0].value;
+                        
+                        this.organization = new Organization(searchName);
+                        $scope.repositories = this.organization.repositories;
+                    }
                 };
 
                 controllers.InfoController = function($scope) {

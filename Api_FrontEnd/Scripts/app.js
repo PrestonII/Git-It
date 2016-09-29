@@ -20,14 +20,7 @@
     }
 
     // resolve this initialization stuff later
-    $("#search-button").click(function (event) {
-        event.preventDefault();
-        var searchName = $("#organization-search-box")[0].value;
 
-        console.log(searchName);
-
-        var organization = new Organization(searchName);
-    });
 
     return app;
 });

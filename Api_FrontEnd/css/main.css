@@ -176,7 +176,7 @@ input {
 #search-button {
     background-color: transparent;
     color: white;
-    transition: all ease-in-out .5s;
+    transition: all ease-in-out .1s;
 }
 
 #search-button:hover {

@@ -1,19 +1,21 @@
 define("Organization", ["Repository"],
     function (Repository) {
 
-        Organization = function(searchName) {
-            self = this;
-
+        Organization = function (searchName) {
+            var self = this;
             this.name = (!searchName || "" === searchName)
                 ? "greySMITH-BIM"
                 : searchName;
 
-            this.mainUrl = "https://api.github.com/orgs/" + self.name;
-            this.repositories = [];
+            this.mainUrl = "https://api.github.com/orgs/" + this.name;
             this.initialize();
         }
 
         Organization.prototype = {
+            name: "",
+            mainUrl: "",
+            repositories: [],
+
             initialize:
                 function() {
                     this.getOrganizationInformation();
@@ -39,17 +41,8 @@ define("Organization", ["Repository"],
 
             getOrganizationInformation:
                 function() {
-                    var xhr = new XMLHttpRequest();
+                    var org = this.getObjectsFromGithub(this.mainUrl);
 
-                    xhr.open("GET", this.mainUrl, false);
-                    xhr.send();
-
-                    console.log(xhr.status);
-
-                    if (xhr.status !== 200)
-                        throw "Couldn't get the information";
-
-                    var org = JSON.parse(xhr.responseText);
                     this.repositories = this.getRepositories();
 
                     return org;
@@ -57,7 +50,7 @@ define("Organization", ["Repository"],
 
             getRepositories:
                 function() {
-                    var repoUrl = self.mainUrl + "/repos";
+                    var repoUrl = this.mainUrl + "/repos";
 
                     var repos = this.getObjectsFromGithub(repoUrl);
 
