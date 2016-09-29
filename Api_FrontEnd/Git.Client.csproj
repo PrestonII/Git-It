@@ -128,16 +128,6 @@
   <ItemGroup>
     <Content Include=".htaccess" />
     <Content Include="CHANGELOG.md" />
-    <Content Include="CONTRIBUTING.md" />
-    <Content Include="doc\crossdomain.md" />
-    <Content Include="doc\css.md" />
-    <Content Include="doc\extend.md" />
-    <Content Include="doc\faq.md" />
-    <Content Include="doc\html.md" />
-    <Content Include="doc\js.md" />
-    <Content Include="doc\misc.md" />
-    <Content Include="doc\TOC.md" />
-    <Content Include="doc\usage.md" />
     <Content Include="LICENSE.md" />
     <Content Include="README.md" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />

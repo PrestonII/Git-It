@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html class="no-js" lang="en-us" >
 <head>
     <title>Git' It - A Quick Repository Search Tool</title>
@@ -81,8 +81,12 @@
                             <br />
                             <ul>
                                 <li data-ng-repeat="repo in repositories | filter: filter.name | orderBy">
-                                    <h2>{{repo.name}}</h2>
-                                    <br />{{repo.location}}<br />
+                                    <h2>
+                                        <a href="#" data-ng-click="displayRepoInfo($event)">
+                                            {{repo.name}}
+                                        </a>
+                                    </h2>
+                                    <br />{{repo.ssh_url}}<br />
                                 </li>
                             </ul>
                         </div>
@@ -93,12 +97,12 @@
                 <!-- #region Display Information -->
                 <div id="info-display" class="col-sm-12 col-md-6 center-block">
                     <h1 class="repo-box title">Information</h1>
-                    <div id="info-box" data-ng-controller="InfoController">
+                    <div id="info-box" data-ng-controller="RepoController">
                         <ul>
-                            <li data-ng-repeat="repo in repoInfo | filter: filter.name | orderBy">
-                                {{repo.name}}<br/>
-                                {{repo.id}}<br/>
-                                {{repo.ssh_url}}<br/>
+                            <li data-ng-model="repo">
+                                Name:       {{repo.name}}<br/>
+                                Id:         {{repo.id}}<br/>
+                                Url:        {{repo.ssh_url}}<br/>
                                 <br />
                             </li>
                         </ul>

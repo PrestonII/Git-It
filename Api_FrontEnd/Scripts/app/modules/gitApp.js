@@ -33,6 +33,7 @@ define("gitApp", ['angular', 'Organization', 'ngRoute', 'ngResource'],
 
                 controllers.RepoController = function($scope) {
                     $scope.repositories = [];
+                    $scope.repo = null;
 
                     $scope.addRepo = function() {
                         $scope.repositories.push({
@@ -47,10 +48,20 @@ define("gitApp", ['angular', 'Organization', 'ngRoute', 'ngResource'],
                         this.organization = new Organization(searchName);
                         $scope.repositories = this.organization.repositories;
                     }
-                };
 
-                controllers.InfoController = function($scope) {
-                    $scope.repoInfo = [];
+                    $scope.displayRepoInfo = function (event) {
+                        event.preventDefault();
+
+                        var repos = this.organization.repositories;
+                        var selRepoName = event.target.innerText;
+
+                        for(var i = 0; i < repos.length; i++ ){
+                            if(repos[i].name === selRepoName){
+                                    $scope.repo = repos[i];
+                                    break;
+                            }
+                        }
+                    }
                 };
 
                 gitapp.controller(controllers);
