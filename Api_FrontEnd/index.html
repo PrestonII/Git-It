@@ -1,5 +1,5 @@
 ﻿<!doctype html>
-<html class="no-js" lang="en-us">
+<html class="no-js" lang="en-us" >
 <head>
     <title>Git' It - A Quick Repository Search Tool</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1"/>
@@ -16,12 +16,12 @@
     <link href="content/animate.min.css" rel="stylesheet"/>
 
     <!-- Scripts -->
-    <script data-main="Scripts/init" src="Scripts/require.js"></script>
+    <script data-main="Scripts/init" src="Scripts/_lib/require.js"></script>
 
 </head>
 <body data-feedly-mini="yes">
 
-<div data-ng-app="git-it-app" id="page">
+<div id="page">
     <!-- #region Git' It Header And Navbar -->
     <section id="intro">
 
@@ -51,7 +51,13 @@
     <!-- #region True Body Content -->
     <section id="display-area">
         <div id="github-search" class="container">
-            <div class="row centered-horiz">
+            <button id="close-button"
+                    type="button"
+                    class="btn btn-lg">
+                <i class="glyphicon glyphicon-remove"></i>
+            </button>
+
+            <div class="row centered-horiz" data-ng-controller="RepoController">
                 <!--<div id="divider" class="col-sm-2"></div>-->
                 <!--#region Search Area-->
                 <div id="search-area" class="col-sm-12 col-md-6 center-block">
@@ -60,7 +66,7 @@
                     <div class="centered">
                         <form id="signup-form" method="post" action="#">
                             <input id="organization-search-box" class="hvr-underline-from-center" type="text" name="organization" placeholder="organization name"/>
-                            <button id="search-button" type="submit" class="btn btn-sm">
+                            <button id="search-button" type="button" class="btn btn-sm" data-ng-click="findOrganization()">
                                 <i class="glyphicon glyphicon-search"></i>
                             </button>
                         </form>
@@ -69,8 +75,20 @@
 
                     <h1 class="repo-display title">Repositories</h1>
                     <div id="repos-in-the-box" class="">
-                        <div class="info-box">
-                            
+                        <div id="repo-box" >
+                            <h2 id="filter">Filter</h2>
+                            <input id="filter-entry" type="text" data-ng-model="filter.name" />
+                            <br />
+                            <ul>
+                                <li data-ng-repeat="repo in repositories | filter: filter.name | orderBy">
+                                    <h2>
+                                        <a href="#" data-ng-click="displayRepoInfo($event)">
+                                            {{repo.name}}
+                                        </a>
+                                    </h2>
+                                    <br />{{repo.ssh_url}}<br />
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -79,16 +97,26 @@
                 <!-- #region Display Information -->
                 <div id="info-display" class="col-sm-12 col-md-6 center-block">
                     <h1 class="repo-box title">Information</h1>
-                    <div class="info-box">
-
+                    <div id="info-box" >
+                        <ul>
+                            <li>
+                                Name:       {{currentRepo.name}}<br/>
+                                Id:         {{currentRepo.id}}<br/>
+                                Url:        {{currentRepo.ssh_url}}<br/>
+                                <br />
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                <!-- #endregion End  Display Information -->
+                <!-- #endregion End Display Information -->
                 <!--<div id="divider" class="col-sm-2"></div>-->
             </div>
         </div>
     </section>
     <!-- #endregion End Of True Content -->
 </div>
+
+    <!--<script src="Scripts/vendor/angular.min.js"></script>
+    <script src="Scripts/otherApp.js"></script>-->
 </body>
 </html>

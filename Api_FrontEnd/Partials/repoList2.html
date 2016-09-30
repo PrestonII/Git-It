@@ -1,0 +1,12 @@
+﻿<div class="container">
+    <h2>Repositories</h2>
+    Location:
+    <br />
+    <input type="text" data-ng-model="location" />
+    <br />
+    <ul>
+        <li data-ng-repeat="repo in repositories | filter: location | orderBy">
+            {{repo.name}} - {{repo.location}}
+        </li>
+    </ul>
+</div>
