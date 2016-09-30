@@ -29,11 +29,22 @@ define("gitApp", ['angular', 'Organization', 'ngRoute', 'ngResource'],
                 //    }
                 //]);
 
+                gitapp.service("repoService",
+                    function() {
+                        var repo = {};
+
+                        this.sharedInfo = {
+                            name: "stst",
+                            id: 41244,
+                            ssh_url: "dsfasfsf"
+                        };
+                    });
+
                 var controllers = {};
 
                 controllers.RepoController = function($scope) {
                     $scope.repositories = [];
-                    $scope.repo = null;
+                    $scope.currentRepo = {};
 
                     $scope.addRepo = function() {
                         $scope.repositories.push({
@@ -56,15 +67,26 @@ define("gitApp", ['angular', 'Organization', 'ngRoute', 'ngResource'],
                         var selRepoName = event.target.innerText;
 
                         for(var i = 0; i < repos.length; i++ ){
-                            if(repos[i].name === selRepoName){
-                                    $scope.repo = repos[i];
-                                    break;
+                            if (repos[i].name === selRepoName) {
+                                $scope.currentRepo = repos[i];
+                                break;
                             }
                         }
                     }
                 };
 
+                controllers.InfoController = function($scope, repoService) {
+                    $scope.repo = {};
+
+                    $scope.$on('parent',
+                        function(event, data) {
+                            console.log(data);
+                        });
+                };
+
                 gitapp.controller(controllers);
+
+
 
                 return gitapp;
             }

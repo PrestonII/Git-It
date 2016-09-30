@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html class="no-js" lang="en-us" >
 <head>
     <title>Git' It - A Quick Repository Search Tool</title>
@@ -57,10 +57,10 @@
                 <i class="glyphicon glyphicon-remove"></i>
             </button>
 
-            <div class="row centered-horiz">
+            <div class="row centered-horiz" data-ng-controller="RepoController">
                 <!--<div id="divider" class="col-sm-2"></div>-->
                 <!--#region Search Area-->
-                <div id="search-area" class="col-sm-12 col-md-6 center-block" data-ng-controller="RepoController">
+                <div id="search-area" class="col-sm-12 col-md-6 center-block">
                     <!-- #region Organization Lookup -->
                     <h1 class="search-display title">Search</h1>
                     <div class="centered">
@@ -97,12 +97,12 @@
                 <!-- #region Display Information -->
                 <div id="info-display" class="col-sm-12 col-md-6 center-block">
                     <h1 class="repo-box title">Information</h1>
-                    <div id="info-box" data-ng-controller="RepoController">
+                    <div id="info-box" >
                         <ul>
-                            <li data-ng-model="repo">
-                                Name:       {{repo.name}}<br/>
-                                Id:         {{repo.id}}<br/>
-                                Url:        {{repo.ssh_url}}<br/>
+                            <li>
+                                Name:       {{currentRepo.name}}<br/>
+                                Id:         {{currentRepo.id}}<br/>
+                                Url:        {{currentRepo.ssh_url}}<br/>
                                 <br />
                             </li>
                         </ul>
