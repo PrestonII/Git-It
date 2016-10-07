@@ -6,6 +6,13 @@ a node-webkit and which aims to create desktop applications which using HTML5 an
 Thanks to those folks you can run the application directly after downloading it without 
 having to install any extra programs.
 
+
 ## Quick start
+
 Download the necessary files from the `Application` folder and follow the instructions
 below.
+
+
+
+
+## Features
