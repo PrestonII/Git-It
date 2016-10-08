@@ -1,5 +1,5 @@
 requirejs.config({
-    baseUrl: "../Scripts",
+    baseUrl: "../scripts",
     paths: {
         angular:            "all_lib/angular",
         ngRoute:            "all_lib/angular-route",
@@ -16,7 +16,7 @@ requirejs.config({
         animationManager:   "system/animationManager",
 
         gitApp:             "app/modules/gitApp",
-        app:                "app"
+        app:                "application"
     },
 
     shim: {

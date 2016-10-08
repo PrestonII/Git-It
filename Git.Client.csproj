@@ -60,20 +60,17 @@
   <ItemGroup>
     <Content Include="404.html" />
     <Content Include="apple-touch-icon-precomposed.png" />
+    <Content Include="css\animate.css" />
+    <Content Include="css\animate.min.css" />
+    <Content Include="css\bootstrap-theme.css" />
+    <Content Include="css\bootstrap.css" />
     <Content Include="partials\repoList2.html" />
     <Content Include="partials\repoList.html" />
     <Content Include="scripts\system\animationManager.js" />
-    <Content Include="scripts\app.js" />
+    <Content Include="scripts\application.js" />
     <Content Include="scripts\app\objs\Repository.js" />
     <Content Include="scripts\init.js" />
     <Content Include="scripts\app\objs\Organization.js" />
-    <Content Include="content\animate.css" />
-    <Content Include="content\animate.min.css" />
-    <Content Include="content\bootstrap-theme.css" />
-    <Content Include="content\bootstrap-theme.min.css" />
-    <Content Include="content\bootstrap.css" />
-    <Content Include="content\bootstrap.min.css" />
-    <Content Include="content\hover-min.css" />
     <Content Include="crossdomain.xml" />
     <Content Include="css\bootstrap-theme.min.css" />
     <Content Include="css\bootstrap.min.css" />
@@ -92,10 +89,6 @@
     <Content Include="scripts\all_lib\modernizr-2.6.2.min.js" />
     <Content Include="robots.txt" />
     <Content Include="packages.config" />
-    <Content Include="content\bootstrap.min.css.map" />
-    <Content Include="content\bootstrap.css.map" />
-    <Content Include="content\bootstrap-theme.min.css.map" />
-    <Content Include="content\bootstrap-theme.css.map" />
     <Content Include="scripts\all_lib\angular-animate.js" />
     <Content Include="scripts\all_lib\angular-animate.min.js" />
     <Content Include="scripts\all_lib\angular-mocks.js" />
@@ -117,6 +110,10 @@
     <Content Include="scripts\all_lib\angular.min.js.map" />
     <Content Include="scripts\all_lib\bootstrap.js" />
     <Content Include="scripts\all_lib\controllers.js" />
+    <Content Include="css\bootstrap-theme.css.map" />
+    <Content Include="css\bootstrap-theme.min.css.map" />
+    <Content Include="css\bootstrap.css.map" />
+    <Content Include="css\bootstrap.min.css.map" />
     <None Include="_references.js" />
     <Content Include="scripts\all_lib\r.js" />
     <Content Include="scripts\all_lib\require.js" />
