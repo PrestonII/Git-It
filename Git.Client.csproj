@@ -81,42 +81,41 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="humans.txt" />
-    <Content Include="img\.gitignore" />
     <Content Include="index.html" />
     <Content Include="scripts\app\modules\gitApp.js" />
-    <Content Include="scripts\all_lib\bootstrap.min.js" />
-    <Content Include="scripts\all_lib\jquery-1.10.2.min.js" />
-    <Content Include="scripts\all_lib\modernizr-2.6.2.min.js" />
+    <Content Include="scripts\all\bootstrap.min.js" />
+    <Content Include="scripts\all\jquery-1.10.2.min.js" />
+    <Content Include="scripts\all\modernizr-2.6.2.min.js" />
     <Content Include="robots.txt" />
     <Content Include="packages.config" />
-    <Content Include="scripts\all_lib\angular-animate.js" />
-    <Content Include="scripts\all_lib\angular-animate.min.js" />
-    <Content Include="scripts\all_lib\angular-mocks.js" />
-    <Content Include="scripts\all_lib\angular-resource.js" />
-    <Content Include="scripts\all_lib\angular-resource.min.js" />
-    <Content Include="scripts\all_lib\angular-route.js">
+    <Content Include="scripts\all\angular-animate.js" />
+    <Content Include="scripts\all\angular-animate.min.js" />
+    <Content Include="scripts\all\angular-mocks.js" />
+    <Content Include="scripts\all\angular-resource.js" />
+    <Content Include="scripts\all\angular-resource.min.js" />
+    <Content Include="scripts\all\angular-route.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="scripts\all_lib\angular-route.min.js">
+    <Content Include="scripts\all\angular-route.min.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="scripts\all_lib\angular-animate.min.js.map" />
-    <Content Include="scripts\all_lib\angular-resource.min.js.map" />
-    <Content Include="scripts\all_lib\angular-route.min.js.map" />
-    <Content Include="scripts\all_lib\angular.js">
+    <Content Include="scripts\all\angular-animate.min.js.map" />
+    <Content Include="scripts\all\angular-resource.min.js.map" />
+    <Content Include="scripts\all\angular-route.min.js.map" />
+    <Content Include="scripts\all\angular.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="scripts\all_lib\angular.min.js" />
-    <Content Include="scripts\all_lib\angular.min.js.map" />
-    <Content Include="scripts\all_lib\bootstrap.js" />
-    <Content Include="scripts\all_lib\controllers.js" />
+    <Content Include="scripts\all\angular.min.js" />
+    <Content Include="scripts\all\angular.min.js.map" />
+    <Content Include="scripts\all\bootstrap.js" />
+    <Content Include="scripts\all\controllers.js" />
     <Content Include="css\bootstrap-theme.css.map" />
     <Content Include="css\bootstrap-theme.min.css.map" />
     <Content Include="css\bootstrap.css.map" />
     <Content Include="css\bootstrap.min.css.map" />
     <None Include="_references.js" />
-    <Content Include="scripts\all_lib\r.js" />
-    <Content Include="scripts\all_lib\require.js" />
+    <Content Include="scripts\all\r.js" />
+    <Content Include="scripts\all\require.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -139,6 +138,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="img\" />
     <Folder Include="scripts\app\controllers\" />
     <Folder Include="scripts\app\directives\" />
     <Folder Include="scripts\app\models\" />

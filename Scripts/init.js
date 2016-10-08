@@ -1,12 +1,12 @@
 requirejs.config({
     baseUrl: "../scripts",
     paths: {
-        angular:            "all_lib/angular",
-        ngRoute:            "all_lib/angular-route",
-        ngResource:         "all_lib/angular-resource",
+        angular:            "all/angular",
+        ngRoute:            "all/angular-route",
+        ngResource:         "all/angular-resource",
 
-        jquery:             "all_lib/jquery-1.10.2.min",
-        bootstrap:          "all_lib/bootstrap.min",
+        jquery:             "all/jquery-1.10.2.min",
+        bootstrap:          "all/bootstrap.min",
         
         Organization:       "app/objs/Organization",
         Repository:         "app/objs/Repository",
