@@ -113,6 +113,7 @@
     <Content Include="css\bootstrap-theme.min.css.map" />
     <Content Include="css\bootstrap.css.map" />
     <Content Include="css\bootstrap.min.css.map" />
+    <Content Include=".nojekyll" />
     <None Include="_references.js" />
     <Content Include="scripts\all\r.js" />
     <Content Include="scripts\all\require.js" />
